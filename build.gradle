@@ -28,6 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 
 	implementation "dev.langchain4j:langchain4j"
+	implementation "dev.langchain4j:langchain4j-mcp"
 	implementation "dev.langchain4j:langchain4j-spring-boot-starter"
 	implementation "dev.langchain4j:langchain4j-open-ai-spring-boot-starter"
 
