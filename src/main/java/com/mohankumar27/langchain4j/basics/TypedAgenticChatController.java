@@ -45,7 +45,7 @@ public class TypedAgenticChatController {
         this.travelAssistant = AgenticServices.parallelBuilder(TravelAssistant.class)
                 .subAgents(flightExpert, hotelExpert)
                 .output(scope -> {
-                    // Typed joiner: must match return type of HolidayPlanner (String)
+                    // combines output from hotel and flight agent
                     String flights = (String) scope.readState("flight_options");
                     String hotels = (String) scope.readState("hotel_options");
                     return "Travel Plan:\n" + flights + "\n" + hotels;
